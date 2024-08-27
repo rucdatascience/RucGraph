@@ -102,4 +102,4 @@ After inputting the data path and name, the program will perform the LDBC Grapha
 
 ## License
 
-RucGraph is released under the [Apache 2.0 license](\LICENSE.txt).
+RucGraph is released under the [Apache 2.0 license](LICENSE.txt).
