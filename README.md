@@ -52,9 +52,9 @@ More diversified functions, such as using Adjacency Lists in GPU memory, is now 
 
 
 
-## Build & Run
+## Copy & Run
 
-Here, we show how to build & run RucGraph on a Linux server with the Ubuntu 20.04 system, 2 Intel(R) Xeon(R) Gold 5218 CPUs, and 4 NVIDIA GeForce RTX 3090 GPUs. The environment is as follows.
+Here, we show how to build & run RucGraph on a Linux server with the Ubuntu 20.04 system, 2 Intel(R) Xeon(R) Gold 5218 CPUs, and an NVIDIA GeForce RTX 3090 GPU. The environment is as follows.
 
 - `cmake --version`: cmake version 3.27.9
 - `g++ --version`: g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0

@@ -3,7 +3,6 @@
 
 #include <GPU_csr/algorithm/GPU_BFS.cuh>
 #include <GPU_csr/algorithm/GPU_connected_components.cuh>
-#include <GPU_csr/algorithm/WCC.cuh>
 #include <CPU_adj_list/algorithm/CPU_sssp_pre.hpp>
 #include <GPU_csr/algorithm/GPU_shortest_paths.cuh>
 #include <GPU_csr/algorithm/GPU_sssp_pre.cuh>
@@ -117,7 +116,7 @@ int main()
             try {
                 std::vector<std::pair<std::string, std::string>> wcc_result;
                 begin = std::chrono::high_resolution_clock::now();
-                wcc_result = Cuda_WCC_two(graph, csr_graph);
+                wcc_result = Cuda_WCC(graph, csr_graph);
                 end = std::chrono::high_resolution_clock::now();
                 gpu_wcc_time = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin).count() / 1e9;
                 printf("GPU WCC cost time: %f s\n", gpu_wcc_time);
