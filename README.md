@@ -9,11 +9,14 @@ RucGraph is a lightweight graph database system that uses both CPUs and GPUs to 
 - RucGraph works efficiently on large graphs with billions of vertices and edges. In particular, on [LDBC Graphalytics Benchmarks](https://ldbcouncil.org/benchmarks/graphalytics/), RucGraph is <b>10 times faster than [neo4j](https://neo4j.com) on CPUs</b>, and <b>50 times faster than  [neo4j](https://neo4j.com) on GPUs</b>.
 
 
-## Graph data structures
+## Graph data structures & algorithms
 
 RucGraph is now using [Adjacency Lists](https://www.geeksforgeeks.org/adjacency-list-meaning-definition-in-dsa/) to store graphs in CPU memory, and using [Sparse Matrix Representations](https://www.geeksforgeeks.org/sparse-matrix-representations-set-3-csr/) (CSRs) to store graphs in GPU memory. 
 
 More diversified functions, such as using Adjacency Lists in GPU memory, is now under development.
+
+
+We have implemented 5 graph analysis algorithms on both CPUs and GPUs to date: Breadth-First Search (BFS), PageRank (PR), Weakly Connected Components (WCC), Community Detection using Label Propagation (CDLP), Single-Source Shortest Paths (SSSP). The pseudo codes of these algorithms can be found in the end of [the LDBC Graphalytics Benchmark handbook](https://arxiv.org/pdf/2011.15028). Nevertheless, our implementations are optimized for parallel computation, and may be considerably different from these pseudo codes.
 
 
 ## Code File structures
